@@ -1,32 +1,68 @@
-import React from 'react';
-import { FaGithub, FaLinkedin, FaSquareFacebook } from 'react-icons/fa6';
-import Navlink from './shared/Navlink';
+import React from "react";
+import { FaGithub, FaLinkedin, FaSquareFacebook } from "react-icons/fa6";
+import Navlink from "./shared/Navlink";
 
 const FooterPage = () => {
   return (
-    <div>
-          
-          <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded py-10 px-15">
+    <footer
+      className="footer footer-horizontal footer-center
+      bg-gradient-to-r from-[#00285c] via-[#0b1220] to-[#10131b]
+      text-white rounded  mt-10 py-12 px-6 md:px-15 relative overflow-hidden"
+    >
+      {/* soft glow background */}
+      <div className="absolute inset-0 bg-blue-500/10 blur-3xl"></div>
 
-             <h1 className="font-extrabold pt-10 pb-12 text-5xl text-gray-300  border-b w-full border-gray-600 rounded-sm ">Mostofa.dev</h1>
+      {/* Brand */}
+      <h1
+        className="relative font-extrabold pt-8 pb-10 text-4xl md:text-5xl
+        bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400
+        bg-clip-text text-transparent
+        transition-all duration-300 hover:scale-105"
+      >
+        Mostofa.dev
+      </h1>
 
-  <nav className="grid grid-flow-col gap-4">
-    <Navlink></Navlink>
-  </nav>
-  <nav>
-    <div className="grid grid-flow-col gap-6">
-       <a href="https://www.facebook.com/mohammadmostofa.dev"> <FaSquareFacebook className='text-xl' /></a>
-       <a href="https://www.linkedin.com/in/mohammadmostofa"> <FaLinkedin className='text-xl' /> </a>
-       <a href="https://github.com/mohammadmostofa"><FaGithub  className='text-xl'/></a>
+      {/* NAV GRID (same structure kept) */}
+      <nav className="relative grid grid-flow-col gap-4">
+        <div className="flex gap-4">
+          <Navlink />
+        </div>
+      </nav>
 
-    </div>
-  </nav>
-  <aside>
-    <p>Copyright © {new Date().getFullYear()} - All right reserved by mohammad mostofa</p>
-  </aside>
-</footer>
+      {/* SOCIAL GRID (same structure kept) */}
+      <nav className="relative">
+        <div className="grid grid-flow-col gap-6 text-2xl">
+          <a
+            href="https://www.facebook.com/mohammadmostofa.dev"
+            className="transition-all duration-300 hover:scale-125 hover:text-blue-500"
+          >
+            <FaSquareFacebook />
+          </a>
 
-    </div>
+          <a
+            href="https://www.linkedin.com/in/mohammadmostofa"
+            className="transition-all duration-300 hover:scale-125 hover:text-blue-400"
+          >
+            <FaLinkedin />
+          </a>
+
+          <a
+            href="https://github.com/mohammadmostofa"
+            className="transition-all duration-300 hover:scale-125 hover:text-gray-300"
+          >
+            <FaGithub />
+          </a>
+        </div>
+      </nav>
+
+      {/* COPYRIGHT */}
+      <aside className="relative pt-8 text-sm text-gray-400">
+        <p>
+          Copyright © {new Date().getFullYear()} - All rights reserved by{" "}
+          <span className="text-white font-semibold">Mohammad Mostofa</span>
+        </p>
+      </aside>
+    </footer>
   );
 };
 
