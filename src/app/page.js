@@ -4,7 +4,7 @@ import React from 'react';
 import bannerImg from '@/profile.png';
 
 import TextAnimation from '@/components/TextAnimation';
-
+// HomePage
 const HomePage = () => {
   return (
 
