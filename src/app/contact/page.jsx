@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ConactPage = () => {
+const ContactPage= () => {
   return (
-    <div>
-             contact
+    <div className='py-20'>
+              ContactPage
     </div>
   );
 };
 
-export default ConactPage;
+export default ContactPage;
